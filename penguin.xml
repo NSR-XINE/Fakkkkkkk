@@ -95,6 +95,10 @@
   <project path="system/update_engine" name="Project-PenguinOS/system_update_engine" remote="penguin" revision="celerity" />
 
   <!-- Vendor -->
+  <remove-project name="AOSPA/android_device_qcom_common" />
+  <project path="device/qcom/common" name="Project-PenguinOS/device_qcom_common" remote="penguin" revision="celerity">
+    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+  </project>
   <remove-project name="AOSPA/android_vendor_aospa" />
   <project path="vendor/aospa" name="Project-PenguinOS/android_vendor_aospa" remote="penguin" revision="celerity">
     <linkfile src="build.sh" dest="rom-build.sh" />
